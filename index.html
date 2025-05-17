@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="فا">
+<head>
+  <meta charset="UTF-8" />
+  <title>علیرضا نوروزی | البرز پلاست</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #0d4987;
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 800px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #f8f8f8;
+      padding: 60px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 32px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .item, .address-location, .online-contact {
+      background-color: #e0e0e0;
+      padding: 35px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 32px;
+    }
+
+    .item p:first-child,
+    .address-location p.title,
+    .online-contact p.title {
+      font-weight: bold;
+      font-size: 36px;
+    }
+
+    .item p:last-child {
+      margin-top: 10px;
+      font-size: 35px;
+    }
+
+    .address-location p.address-text,
+    .address-location a,
+    .online-contact a,
+    .item a {
+      font-size: 35px;
+      text-decoration: none;
+      color: #0077cc;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .online-contact a {
+      margin-bottom: 20px;
+    }
+
+    .online-contact i {
+      margin-left: 8px;
+    }
+
+    /* رنگ مشکی فقط برای متن آدرس */
+    .address-text {
+      color: black !important;
+    }
+
+    /* استایل ستاره‌ها */
+    #stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+
+  <div class="container">
+    <img src="logo.jpg" alt="Alborz Plast Logo" class="logo" />
+    <div class="card">
+      <h1>علیرضا نوروزی</h1>
+      <div class="subtitle">مدیر اجرایی (COO)</div>
+
+      <div class="item">
+        <p>Phone</p>
+        <p style="direction: ltr;"><a href="tel:+989129365941">+989129365941</a></p>
+      </div>
+
+      <div class="item">
+        <p>Website</p>
+        <p><a href="https://www.alborzplast.com/" target="_blank">www.alborzplast.com</a></p>
+      </div>
+
+      <div class="address-location">
+        <p class="title">Address</p>
+        <p class="address-text">تهران، خیابان مطهری، خیابان فجر، پلاک ۱۸، واحد ۴</p>
+        <p class="title">Location</p>
+        <a href="https://www.google.com/maps/place/تهران+خیابان+مطهری" target="_blank">📍 Show on map</a>
+      </div>
+
+      <div class="online-contact">
+        <p class="title">Online Communication</p>
+        <a href="https://t.me/erazilan" target="_blank"><i class="fab fa-telegram"></i>Telegram: @erazilan</a>
+        <a href="https://wa.me/989129365941" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp: Chat Now</a>
+        <a href="mailto:alirezanz5941@gmail.com" target="_blank"><i class="fas fa-envelope"></i>Email: alirezanz5941@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const starContainer = document.getElementById('stars');
+
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+
+      const size = Math.random() * 4 + 2;
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+
+      starContainer.appendChild(star);
+    }
+
+    // افزایش تعداد ستاره‌ها به 130 (30٪ بیشتر)
+    for (let i = 0; i < 130; i++) {
+      createStar();
+    }
+  </script>
+</body>
+</html>
